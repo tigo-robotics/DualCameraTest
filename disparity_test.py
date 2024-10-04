@@ -187,7 +187,8 @@ def main():
         #right_rectified = cv2.remap(right_frame, map1_right, map2_right, cv2.INTER_LINEAR)
 
         # Compute disparity
-        disparity = compute_disparity(left_frame, right_frame)
+        #disparity = compute_disparity(left_frame, right_frame)
+        disparity = compute_disparity(right_frame,left_frame)
 
         # Apply color map to disparity
         #disparity_color = cv2.applyColorMap(disparity, cv2.COLORMAP_JET)

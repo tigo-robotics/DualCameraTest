@@ -183,8 +183,8 @@ def main():
         left_frame = frame[:, width//2:]
 
         # Undistort and rectify the images
-        #left_rectified = cv2.remap(left_frame, map1_left, map2_left, cv2.INTER_LINEAR)
-        #right_rectified = cv2.remap(right_frame, map1_right, map2_right, cv2.INTER_LINEAR)
+        left_rectified = cv2.remap(left_frame, map1_left, map2_left, cv2.INTER_LINEAR)
+        right_rectified = cv2.remap(right_frame, map1_right, map2_right, cv2.INTER_LINEAR)
 
         # Compute disparity
         disparity = compute_disparity(left_frame, right_frame)
