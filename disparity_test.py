@@ -115,7 +115,7 @@ def compute_disparity(left_img, right_img):
     # Create StereoSGBM object
     stereo = cv2.StereoSGBM_create(
         minDisparity=16,
-        numDisparities=8*16,  # Increased from 16*16
+        numDisparities=8*16,  # Increased to 16*16 to shorten range of detection
         blockSize=7,
         P1=4 * 3 * 7**2,
         P2=8 * 3 * 7**2,
